@@ -16,5 +16,8 @@ RUN apt-get update && \
     apt-get install -y -q --force-yes apache2 php5 php5-dev php5-curl php5-intl php5-phalcon php5-pgsql curl sudo zip unzip git php-pear && \
     apt-get clean
 
+# enable rewrite
+RUN a2enmod rewrite
+
 # run the thing
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
