@@ -13,7 +13,7 @@ RUN echo "deb http://packagecloud.io/phalcon/stable/debian/ jessie main" >> /etc
 
 # Fetch & install everything we need
 RUN apt-get update && \
-    apt-get install -y -q --force-yes apache2 php5 php5-phalcon curl sudo zip unzip git php-pear && \
+    apt-get install -y -q --force-yes apache2 php5 php5-dev php5-curl php5-intl php5-phalcon curl sudo zip unzip git php-pear && \
     apt-get clean
 
 # run the thing
